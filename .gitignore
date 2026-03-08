@@ -1,0 +1,13 @@
+# Biomass Conversion Optimization Framework
+__pycache__/
+*.py[cod]
+*.egg-info/
+.env
+venv/
+.venv/
+.ipynb_checkpoints/
+*.DS_Store
+outputs/reports/
+*.log
+dist/
+build/
