@@ -103,10 +103,7 @@ biomass-conversion-optimization/
 M.S. Chemical Engineering — Florida A&M University (August 2023 - December 2026)
 M.S. Computer Science — University of Texas at Dallas (Current)
 
-*Google Scholar: 6 publications | 112 citations | h-index 5*
+*Google Scholar: 6 publications | 120 citations | h-index 5*
 
----
 
-## License
 
-MIT License
