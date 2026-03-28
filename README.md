@@ -8,8 +8,7 @@
 
 I am currently developing an open-source computational framework for optimizing the conversion of U.S. agricultural and industrial waste streams into high-value biochemicals at commercially viable yields. This framework combines **Design of Experiments (DOE)** with advanced **Machine Learning** to identify optimal bioprocess conditions across a range of domestic waste feedstocks and target products.
 
-The framework is applicable across multiple waste streams to produce target products. It is **open-source** and therefore available permanently to any U.S university, national lab, or manufacturer.
-
+The framework is applicable across multiple waste streams to produce target products.
 ---
 
 ## Current Status
