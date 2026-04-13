@@ -1,0 +1,40 @@
+name: CI
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+    branches: [main, master]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Check core imports
+        run: python -c "import numpy, pandas, sklearn, scipy, matplotlib, seaborn; print('Core imports OK')"
+
+      - name: Syntax check all modules
+        run: |
+          python -m py_compile bcof/optimization/doe_engine.py
+          python -m py_compile bcof/optimization/ml_optimizer.py
+          python -m py_compile bcof/reporting/protocol_card.py
+          python -m py_compile run_notebook.py
+
+      - name: Framework smoke test
+        run: python -c "
+from bcof.optimization.doe_engine import DOEEngine
+from bcof.optimization.ml_optimizer import MLOptimizer
+print('Framework imports OK')
+"
