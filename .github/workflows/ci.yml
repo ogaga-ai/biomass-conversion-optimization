@@ -33,8 +33,4 @@ jobs:
           python -m py_compile run_notebook.py
 
       - name: Framework smoke test
-        run: python -c "
-from bcof.optimization.doe_engine import DOEEngine
-from bcof.optimization.ml_optimizer import MLOptimizer
-print('Framework imports OK')
-"
+        run: python run_notebook.py --smoke-check || python -c "from bcof.optimization.doe_engine import DOEEngine; from bcof.optimization.ml_optimizer import MLOptimizer; print('Framework imports OK')"
